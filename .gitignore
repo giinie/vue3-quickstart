@@ -21,3 +21,8 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# User Custom
+/training/es6test/package-lock.json
+/training/es6test/node_modules/
+/training/es6test/build/
