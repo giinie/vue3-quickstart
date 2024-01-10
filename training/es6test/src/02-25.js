@@ -1,6 +1,7 @@
-let obj = {name: "홍길동", age : 20};
-const proxy = new Proxy(obj, {
-    get: function(target, key) {
+var arr = [10, 20, 30];
+
+const proxy = new Proxy(arr, {
+    get: function(target, key, receiver) {
         console.log("## get " + key);
         if (!target[key]) {
             throw new Error(`존재하지 않는 속성(${key})입니다.`);
@@ -16,6 +17,5 @@ const proxy = new Proxy(obj, {
     }
 });
 
-console.log(proxy.name);
-proxy.name = "임꺽정";
-proxy.age = 30;
+proxy[1] = 99;
+console.log(arr);
