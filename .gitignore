@@ -23,6 +23,5 @@ pnpm-debug.log*
 *.sw?
 
 # User Custom
-/training/es6test/package-lock.json
-/training/es6test/node_modules/
-/training/es6test/build/
+package-lock.json
+build
