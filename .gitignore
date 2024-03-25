@@ -25,3 +25,4 @@ pnpm-debug.log*
 # User Custom
 package-lock.json
 build
+*-lock.yaml
