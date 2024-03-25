@@ -1,14 +1,14 @@
 const staticUsers = [
   { userid: 'user1', password: '1234', roles: ['users'] },
   { userid: 'user2', password: '1234', roles: ['users'] },
-  { userid: 'admin', password: '1234', roles: ['users', 'admins'] }
+  { userid: 'admin', password: '1234', roles: ['users', 'admins'] },
 ]
 
 const pathsToRoles = [
   { path: '/', roles: ['everybody'] },
   { path: '/login', roles: ['everybody'] },
   { path: '/users', roles: ['users', 'admins'] },
-  { path: '/admins', roles: ['admins'] }
+  { path: '/admins', roles: ['admins'] },
 ]
 
 //userInfo가 null이면 로컬 스토리지 삭제

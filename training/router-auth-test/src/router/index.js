@@ -12,8 +12,8 @@ const router = createRouter({
     { path: '/', name: 'home', component: Home },
     { path: '/login', name: 'login', component: Login },
     { path: '/users', name: 'users', component: Users },
-    { path: '/admins', name: 'admins', component: Admins }
-  ]
+    { path: '/admins', name: 'admins', component: Admins },
+  ],
 })
 
 // Navigation Guard

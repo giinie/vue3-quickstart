@@ -23,6 +23,6 @@ export default {
       })
     }
     return { userInfo, logout }
-  }
+  },
 }
 </script>

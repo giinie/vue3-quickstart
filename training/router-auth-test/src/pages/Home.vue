@@ -27,6 +27,6 @@ export default {
       })
     }
     return { data, logout }
-  }
+  },
 }
 </script>
