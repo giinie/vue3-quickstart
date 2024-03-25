@@ -15,10 +15,12 @@
 
 <script>
 export default {
-  name : "App"
+  name: 'App'
 }
 </script>
 
 <style>
-.container { margin:10px; }
+.container {
+  margin: 10px;
+}
 </style>
