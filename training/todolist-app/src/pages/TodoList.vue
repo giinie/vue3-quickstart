@@ -11,13 +11,17 @@
         <TodoItem v-for="todoItem in todoList" :key="todoItem.id" :todoItem="todoItem" />
       </ul>
     </div>
+    <span>완료된 할일 : {{ doneCount }}</span>
   </div>
 </template>
 
 <script setup>
-import { inject } from 'vue';
+import { computed } from 'vue';
+import { useTodoListStore } from '@/stores/todoList.js';
 import TodoItem from '@/pages/TodoItem.vue';
 
-const todoList = inject('todoList');
-const { fetchTodoList } = inject('actions');
+const todoListStore = useTodoListStore();
+const { fetchTodoList } = todoListStore;
+const doneCount = computed(() => todoListStore.doneCount);
+const todoList = computed(() => todoListStore.todoList);
 </script>
