@@ -9,32 +9,32 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { loginProcess } from '@/utils/AuthUtil.js'
+import { reactive } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { loginProcess } from '@/utils/AuthUtil.js';
 
 export default {
   name: 'Login',
   setup() {
-    const router = useRouter()
-    const currentRoute = useRoute()
-    const fromname = currentRoute.query.fromname
+    const router = useRouter();
+    const currentRoute = useRoute();
+    const fromname = currentRoute.query.fromname;
 
-    const info = reactive({ userid: '', password: '' })
+    const info = reactive({ userid: '', password: '' });
 
     const successCallback = () => {
-      if (fromname) router.push({ path: fromname })
-      else router.push({ name: 'home' })
-    }
+      if (fromname) router.push({ path: fromname });
+      else router.push({ name: 'home' });
+    };
     const failCallback = () => {
-      alert('로그인 실패')
-    }
+      alert('로그인 실패');
+    };
 
     const login = () => {
-      loginProcess(info.userid, info.password, successCallback, failCallback)
-    }
+      loginProcess(info.userid, info.password, successCallback, failCallback);
+    };
 
-    return { info, login }
+    return { info, login };
   },
-}
+};
 </script>

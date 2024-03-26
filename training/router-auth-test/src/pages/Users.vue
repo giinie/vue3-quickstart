@@ -9,20 +9,20 @@
 </template>
 
 <script>
-import { getUserInfo, logoutProcess } from '@/utils/AuthUtil.js'
-import { useRouter } from 'vue-router'
+import { getUserInfo, logoutProcess } from '@/utils/AuthUtil.js';
+import { useRouter } from 'vue-router';
 
 export default {
   name: 'Users',
   setup() {
-    const router = useRouter()
-    const userInfo = getUserInfo()
+    const router = useRouter();
+    const userInfo = getUserInfo();
     const logout = () => {
       logoutProcess(() => {
-        router.push({ name: 'home' })
-      })
-    }
-    return { userInfo, logout }
+        router.push({ name: 'home' });
+      });
+    };
+    return { userInfo, logout };
   },
-}
+};
 </script>

@@ -11,22 +11,22 @@
 </template>
 
 <script>
-import { getUserInfo, logoutProcess } from '@/utils/AuthUtil.js'
-import { useRouter } from 'vue-router'
-import { reactive } from 'vue'
+import { getUserInfo, logoutProcess } from '@/utils/AuthUtil.js';
+import { useRouter } from 'vue-router';
+import { reactive } from 'vue';
 
 export default {
   name: 'Home',
   setup() {
-    const router = useRouter()
-    const data = reactive({ userInfo: getUserInfo() })
+    const router = useRouter();
+    const data = reactive({ userInfo: getUserInfo() });
     const logout = () => {
       logoutProcess(() => {
-        data.userInfo = {}
-        router.push({ name: 'home' })
-      })
-    }
-    return { data, logout }
+        data.userInfo = {};
+        router.push({ name: 'home' });
+      });
+    };
+    return { data, logout };
   },
-}
+};
 </script>
